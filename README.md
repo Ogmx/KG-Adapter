@@ -6,9 +6,12 @@ Accepted by "ACL 2024 Findings"
 # Updare V1:
 * add code and data for OBQA dataset
 * Note: The current version is the original unorganized code, there are some redundant information, it may be difficult to run directly, please refer to the code mainly.
+  
+---
 
 # How to use:
 * Install all required libraries
+* Download the data and ckpt files and place them in the root directory: [google drive]([https://www.baidu.com](https://drive.google.com/drive/folders/15MNxrVev-2YXd6BYv_ngpe-729gq5wmX?usp=drive_link))
 * python auto_run.py
 
 # File Structure
@@ -38,17 +41,12 @@ Accepted by "ACL 2024 Findings"
 │          obqa+csqa_v2_(34908,1024)_nodes_emb.pt
 │          
 ├─eval
-│  │  csqa_kg.py
-│  │  cwq_kg.py
-│  │  halueval_kg.py
-│  │  obqa_kg.py
-│  │  truthfulqa_kg.py
-│  │  utils.py
-│  │  webqsp_kg.py
-│  │  
+│  └─.......
 │          
 ├─LLMs: put LLMs here
 │  └─zephyr-alpha
+│
+│
 ├─model: KG-Adapter model for different base LLMs
 │      llama_v3.py
 │      mistral_v3.py
