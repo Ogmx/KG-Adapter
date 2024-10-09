@@ -39,18 +39,18 @@ Accepted by "ACL 2024 Findings"
 │  └─KG_emb
 │          obqa+csqa_v2_(34908,1024)_nodes_emb.pt
 │          
-├─eval
+├─eval: Methods for evaluating
 │  └─.......
 │          
 ├─LLMs: put LLMs here
-│  └─zephyr-alpha
+│  └─zephyr-alpha: Can be found at https://huggingface.co/HuggingFaceH4/zephyr-7b-alpha
 │
 │
 ├─model: KG-Adapter model for different base LLMs
 │      llama_v3.py
 │      mistral_v3.py
 │      
-├─outputs
+├─outputs: Experiment results
 │  └─kg-adapterV4_lr5e-4_wu0.1_zephyr_obqa_v2+SRGAT_[dec]_32+V4_r1
 ```
 
