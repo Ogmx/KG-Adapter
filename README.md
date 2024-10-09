@@ -56,7 +56,7 @@ Accepted by "ACL 2024 Findings"
 ```
 
 # Cite
-'''
+```
 @inproceedings{tian-etal-2024-kg,
     title = "{KG}-Adapter: Enabling Knowledge Graph Integration in Large Language Models through Parameter-Efficient Fine-Tuning",
     author = "Tian, Shiyu  and
@@ -79,6 +79,4 @@ Accepted by "ACL 2024 Findings"
     pages = "3813--3828",
     abstract = "Although large language models (LLMs) show remarkable capabilities and generalizability across various tasks, they are criticized for lack of expertise. One promising solution is to combine knowledge graphs (KGs) with LLMs, and recent studies focus on integrating KGs into LLMs through prompt-based methods. However, these approaches fail to use the structural information of the KGs, suffer from the problem of knowledge conflict, and over-reliance on super LLMs. To address these challenges, we propose KG-Adapter, a parameter-level KG integration method based on parameter-efficient fine-tuning (PEFT). Specifically, we introduce a novel adapter structure designed for decoder-only LLMs, which can encode KGs from both node-centered and relation-centered perspectives, and then perform joint reasoning with LLMs to generate responses end-to-end. Experiments with diverse models on four datasets for two different tasks all demonstrate significant improvements. With only 28M parameters trained, we make the 7B-parameter LLM outperform the previous full-parameter fine-tuned state-of-the-art method and comparable to the prompt-based ChatGPT methods.",
 }
-
-'''
-        
+```
