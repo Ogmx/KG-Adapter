@@ -227,7 +227,7 @@ if __name__ == "__main__":
     parser.add_argument('--eval', action='store_true')
     parser.add_argument('--exp_name', default='TEST', type=str)
     parser.add_argument('--pretrained_path', default='LLMs/zephyr-alpha', type=str)
-    parser.add_argument('--kg_adapter_model_path', default='models/kg-adapter-llama', type=str)
+    parser.add_argument('--kg_adapter_model_path', default='preprocessed_models/kg-adapter', type=str)
     parser.add_argument('--kg_adapter_online_load', action='store_true')
     parser.add_argument('--save_path', default='ckpt/', type=str)
     parser.add_argument('--ckpt_path', default=None, type=str)
