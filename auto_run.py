@@ -4,7 +4,7 @@ import sys
 import time
 import datetime
 import threading
-
+import torch
 
 def gpu_info(gpu_index):
     gpu_status = os.popen('nvidia-smi | grep %').read().split('\n')[gpu_index].split('|')
@@ -19,7 +19,7 @@ def waiting_gpu(interval=1, need_memory=28000):
     # need_memory_lst = [28000]  # [12000, 20000]
     need_memory_lst = [need_memory]
     num_lst = [1]
-    gid = [0, 1, 2, 3]
+    gid = [x for x in range(torch.cuda.device_count())]
     while True:
         for need_memory, num in zip(need_memory_lst, num_lst):
             candid_gid_lst = []
