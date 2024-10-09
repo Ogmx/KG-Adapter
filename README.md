@@ -1,11 +1,12 @@
 # KG-Adapter
 Code for the paper "KG-Adapter: Enabling Knowledge Graph Integration in Large Language Models through Parameter-Efficient Fine-Tuning"
+
 Accepted by "ACL 2024 Findings"
 ![Model_v2](https://github.com/Ogmx/KG-Adapter/assets/37243586/daf63dc3-5c7c-431d-9187-e71892cbd325)
 
 # Update V1:
 * add code and data for OBQA dataset
-* Note: The current version is the original unorganized code, there are some redundant information, it may be difficult to run directly, please refer to the code mainly.
+* **Note: The current version is the original unorganized code, there are some redundant information, it may be difficult to run directly, please refer to the code mainly.**
   
 ---
 
