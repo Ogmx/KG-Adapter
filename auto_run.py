@@ -135,7 +135,8 @@ if __name__ == '__main__':
     running_id = []
     finished_id = []
     cmds = [
-    
+
+        # train
         (
              "python mymain.py --exp_name 'kg-adapterV4_lr5e-4_wu0.1_zephyr_obqa_v2+SRGAT_[dec]_32+V4_r1' --peft_type 'kg-adapter' --lr 5e-4 --warm_up_epoch 0.1 --strategy 'deepspeed' "
              "--train_data_version 'obqa_zephyr_v2' --test_data_version 'obqa_zephyr_v2' --eval_data_version 'obqa_zephyr_v2' "
@@ -147,11 +148,22 @@ if __name__ == '__main__':
              "--kg_adapter_node_emb_size 1024 --num_relations 38 "
              "--dev2 --save_top_k 3 "
         ),
+
+        # load checkpoint and test
+        (
+            "python mymain.py --exp_name 'Our-bset-cast-study' --peft_type 'kg-adapter' --lr 5e-4 --warm_up_epoch 0.1 --strategy 'deepspeed' --eval "
+            "--train_data_version 'obqa_zephyr_v2' --test_data_version 'obqa_zephyr_v2' --eval_data_version 'obqa_zephyr_v2' "
+            "--pretrained_path 'LLMs/zephyr-alpha' --exp_set 'loss_only_on_ans+no_share_ca+use_edge_emb+mix_emb+use_trips+use_SRGAT' "
+            "--node_emb_path 'data/KG_emb/obqa+csqa_v2_(34908,1024)_nodes_emb.pt' "
+            "--ckpt_path 'ckpt/kg-adapterV4_lr5e-4_wu0.1_zephyr_obqa_v2+SRGAT_[dec]_32+V4_r1/peft_ckpt_epoch=3-step=312.bin' "
+            "--test_data_path 'data/all_test_3_v2.csv' "
+            "--test_set 'obqa+no_user_inst+task_system_inst+add_special_tokens+output_sg' --monitor 'val_em' "
+            "--kg_adapter_enc_range [0,0] --kg_adapter_dec_range [0,32] --keep_ratio 1.0 "
+            "--kg_adapter_node_emb_size 1024 --num_relations 38 "
+        ),
+
+        # ---------------Running commands for other experimental configurations for reference-----------------------#
         
-
-        # --------------------------------------#
-        # change: all use SWI2
-
         # (
         #     "python mymain.py --exp_name 'kg-adapter_lr5e-5_wu1_llama2_mixdata_v5+use_edge_emb+mix_emb' --peft_type 'kg-adapter' --lr 5e-5 --warm_up_epoch 1 --strategy 'deepspeed' "
         #     "--train_data_version 'mixdata_v5' --test_data_version 'mixdata_v5' --eval_data_version 'v2' "
