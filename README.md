@@ -13,6 +13,7 @@ Accepted by "ACL 2024 Findings"
 # How to use:
 * Install all required libraries
 * Download the data and ckpt files and place them in the root directory: [google drive](https://drive.google.com/drive/folders/15MNxrVev-2YXd6BYv_ngpe-729gq5wmX?usp=drive_link)
+* Download LLMs from Huggingface, such as [Zephyr-alpha](https://huggingface.co/HuggingFaceH4/zephyr-7b-alpha)
 * python auto_run.py  (it will automatically create a screen and run the command)
 # File Structure
 ```
