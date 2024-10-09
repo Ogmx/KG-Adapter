@@ -1,0 +1,163 @@
+ablation_exp_set: ''
+accelerator: auto
+batch_size: 64
+batch_size_per_device: 64
+data_path: /raid_sdb/home/tsy/KG_data
+debug: false
+dev: false
+dev2: true
+devices:
+- 0
+eval: false
+eval_data_version: obqa_zephyr_v2
+exp_name: kg-adapterV4_lr5e-4_wu0.1_zephyr_obqa_v2+SRGAT_[dec]_32+V4_r1
+exp_set: loss_only_on_ans+no_share_ca+use_edge_emb+mix_emb+use_trips+use_SRGAT
+fuse_rate: 1.0
+gradient_accumulation_iters: 32
+info_merge_pos: before
+kd_adapter_hidden_size: 64
+keep_ratio: 1.0
+kg_adapter_dec_range: '[0,32]'
+kg_adapter_enc_range: '[0,0]'
+kg_adapter_info_merge: gate
+kg_adapter_model_path: /raid_sdb/home/tsy/models/kg-adapter-llama
+kg_adapter_node_emb_size: 1024
+kg_adapter_online_load: false
+lr: 0.0005
+max_epochs: 10
+max_node_num_per_batch: 2500
+max_seq_length: 1024
+micro_batch_size: 2
+model_all_p_num: 7305368162
+model_config: !!python/object:transformers.models.mistral.configuration_mistral.MistralConfig
+  _commit_hash: null
+  _name_or_path: /raid_sdb/home/tsy/models/kg-adapter-llama_base_model_zephyr-alpha_p_num_7305368162_s_0bc87e636e046313c9a27650cc110e9d
+  add_cross_attention: false
+  add_lora: false
+  align_mask: false
+  architectures:
+  - MistralForCausalLM
+  bad_words_ids: null
+  begin_suppress_tokens: null
+  bos_token_id: 1
+  chunk_size_feed_forward: 0
+  cross_attention_hidden_size: null
+  decoder_start_token_id: null
+  dev: false
+  diversity_penalty: 0.0
+  do_sample: false
+  dynamic_prune: false
+  early_stopping: false
+  enc_interact_with_LLM: false
+  enc_sa: false
+  encoder_no_repeat_ngram_size: 0
+  eos_token_id: 2
+  exp_set: loss_only_on_ans+no_share_ca+use_edge_emb+mix_emb+use_trips+use_SRGAT
+  exponential_decay_length_penalty: null
+  finetuning_task: null
+  forced_bos_token_id: null
+  forced_eos_token_id: null
+  fuse_rate: 1.0
+  hidden_act: silu
+  hidden_size: 4096
+  id2label:
+    0: LABEL_0
+    1: LABEL_1
+  info_merge_pos: before
+  initializer_range: 0.02
+  intermediate_size: 14336
+  is_decoder: false
+  is_encoder_decoder: false
+  keep_ratio: 1.0
+  kg_adapter_dec_range:
+  - 0
+  - 32
+  kg_adapter_enc_range:
+  - 0
+  - 0
+  kg_adapter_hidden_size: 64
+  kg_adapter_info_merge: gate
+  kg_adapter_intermediate_size: 256
+  kg_adapter_node_emb_size: 1024
+  label2id:
+    LABEL_0: 0
+    LABEL_1: 1
+  length_penalty: 1.0
+  linear_emb: false
+  linear_scale: false
+  max_length: 20
+  max_position_embeddings: 32768
+  min_length: 0
+  mix_emb: true
+  model_type: mistral
+  no_repeat_ngram_size: 0
+  no_res: false
+  node_num: 34908
+  num_attention_heads: 32
+  num_beam_groups: 1
+  num_beams: 1
+  num_hidden_layers: 32
+  num_key_value_heads: 8
+  num_relations: 38
+  num_return_sequences: 1
+  output_attentions: false
+  output_hidden_states: false
+  output_scores: false
+  output_sg: false
+  pad_token_id: 2
+  prefix: null
+  problem_type: null
+  pruned_heads: {}
+  remove_invalid_values: false
+  repetition_penalty: 1.0
+  return_dict: true
+  return_dict_in_generate: false
+  rms_norm_eps: 1.0e-05
+  rope_theta: 10000.0
+  scaling_rate: 1.0
+  sep_token_id: null
+  share_ca: false
+  sliding_window: 4096
+  suppress_tokens: null
+  task_specific_params: null
+  temperature: 1.0
+  tf_legacy_loss: false
+  tie_encoder_decoder: false
+  tie_word_embeddings: false
+  tokenizer_class: null
+  top_k: 50
+  top_p: 1.0
+  torchscript: false
+  train_lm_head: false
+  transformers_version: 4.34.0
+  typical_p: 1.0
+  use_SRGAT: true
+  use_bfloat16: false
+  use_cache: true
+  use_edge_emb: true
+  use_gnn: true
+  use_kg_encoder: false
+  use_node_emb: true
+  use_prefix: false
+  use_trips: true
+  vocab_size: 32000
+monitor: val_em
+node_emb_path: /raid_sdb/home/tsy/KG_data/KG_emb/obqa+csqa_v2_(34908,1024)_nodes_emb.pt
+num_epochs: 10
+num_relations: 38
+num_workers: 4
+out_dir: /raid_sdb/home/tsy/outputs/
+pad_id: 0
+peft_type: kg-adapter
+precision: bf16-mixed
+pretrained_path: /raid_sdb/LLMs/zephyr-alpha
+save_path: /raid_sdb/home/tsy/KGLLM_ckpt/kg-adapterV4_lr5e-4_wu0.1_zephyr_obqa_v2+SRGAT_[dec]_32+V4_r1
+save_top_k: 3
+scaling_rate: 1.0
+strategy: deepspeed
+test_data_path: /raid_sdb/home/tsy/KG_data/all_test_3_v2.csv
+test_data_version: obqa_zephyr_v2
+test_set: obqa+no_user_inst+task_system_inst+add_special_tokens
+train_data_version: obqa_zephyr_v2
+warm_up_epoch: 0.1
+weight_decay: 0.02

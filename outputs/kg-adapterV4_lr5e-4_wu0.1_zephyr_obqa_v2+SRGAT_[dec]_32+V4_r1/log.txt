@@ -1,0 +1,30 @@
+----valid at epoch 0 at global rank 0: {'avg_train_loss': nan, 'avg_val_loss': 1.32772958278656, 'avg_val_acc': 0.0, 'val_em': 7.0, 'obqa_dev_acc': nan, 'obqa_test_acc': nan}
+None
+
+----valid at epoch 0 at global rank 0: {'avg_train_loss': 0.17237212687920675, 'avg_val_loss': 0.03396950662136078, 'avg_val_acc': 0.0, 'val_em': 909.0, 'obqa_dev_acc': 0.9, 'obqa_test_acc': 0.918}
+None
+
+----valid at epoch 1 at global rank 0: {'avg_train_loss': 0.02681292825865509, 'avg_val_loss': 0.03513098135590553, 'avg_val_acc': 0.0, 'val_em': 910.0, 'obqa_dev_acc': 0.896, 'obqa_test_acc': 0.924}
+None
+
+----valid at epoch 2 at global rank 0: {'avg_train_loss': 0.016276655446901937, 'avg_val_loss': 0.040829848498106, 'avg_val_acc': 0.0, 'val_em': 905.0, 'obqa_dev_acc': 0.89, 'obqa_test_acc': 0.92}
+None
+
+----valid at epoch 3 at global rank 0: {'avg_train_loss': 0.011966157301152155, 'avg_val_loss': 0.039166443049907684, 'avg_val_acc': 0.0, 'val_em': 915.0, 'obqa_dev_acc': 0.898, 'obqa_test_acc': 0.932}
+None
+
+----valid at epoch 4 at global rank 0: {'avg_train_loss': 0.00989997072757866, 'avg_val_loss': 0.04463636130094528, 'avg_val_acc': 0.0, 'val_em': 903.0, 'obqa_dev_acc': 0.884, 'obqa_test_acc': 0.922}
+None
+
+----valid at epoch 5 at global rank 0: {'avg_train_loss': 0.005548484567920881, 'avg_val_loss': 0.046115294098854065, 'avg_val_acc': 0.0, 'val_em': 906.0, 'obqa_dev_acc': 0.896, 'obqa_test_acc': 0.916}
+None
+
+----valid at epoch 6 at global rank 0: {'avg_train_loss': 0.002444800319517031, 'avg_val_loss': 0.05644964426755905, 'avg_val_acc': 0.0, 'val_em': 908.0, 'obqa_dev_acc': 0.898, 'obqa_test_acc': 0.918}
+None
+
+----valid at epoch 7 at global rank 0: {'avg_train_loss': 0.0012786570022025694, 'avg_val_loss': 0.05626411363482475, 'avg_val_acc': 0.0, 'val_em': 914.0, 'obqa_dev_acc': 0.896, 'obqa_test_acc': 0.932}
+None
+
+----valid at epoch 8 at global rank 0: {'avg_train_loss': 0.00043506186586160837, 'avg_val_loss': 0.06328307837247849, 'avg_val_acc': 0.0, 'val_em': 911.0, 'obqa_dev_acc': 0.896, 'obqa_test_acc': 0.926}
+None
+
