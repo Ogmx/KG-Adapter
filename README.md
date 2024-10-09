@@ -21,10 +21,9 @@ Accepted by "ACL 2024 Findings"
 │  auto_run.py
 │  auto_run_log.txt
 │  eval_old.py
-│  mydata.py
-│  myeval.py
+│  mydata.py:  data module of PyTorch Lightning 
 │  mymain.py
-│  mymodel.py
+│  mymodel.py: model module of PyTorch Lightning
 │  utils.py
 │  __init__.py
 │  
