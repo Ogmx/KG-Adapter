@@ -1196,18 +1196,6 @@ if __name__ == '__main__':
         #     "--kg_adapter_enc_range [0,0] --kg_adapter_dec_range [0,32] --keep_ratio 1.0 --num_relations 1070 "
         #     "--max_seq_length 1024 "
         # ),
-
-        (
-            "python mymain.py --exp_name 'kg-adapterV4_lr5e-4_wu0.1_zephyr_wqsp_v3+SRGAT_[dec]_max1024_32+ep20' --peft_type 'kg-adapter' --lr 5e-4 --warm_up_epoch 0.1 --strategy 'deepspeed' "
-            "--train_data_version 'wqsp_zephyr_v3' --test_data_version 'wqsp_zephyr_v3' --eval_data_version '0' "
-            "--pretrained_path '/raid_sdb/LLMs/zephyr-alpha' --exp_set 'loss_only_on_ans+no_share_ca+use_edge_emb+mix_emb+use_trips+use_SRGAT' "
-            "--node_emb_path '/raid_sdb/home/tsy/KG_data/KG_emb/WQSP+CWQ_(66791,50)_FreeBase_TransE_emb.pt' "
-            "--test_data_path '/raid_sdb/home/tsy/KG_data/wqsp+cwq_test.csv' "
-            "--test_set 'wqsp+no_user_inst+task_system_inst+add_special_tokens' --monitor 'val_em' "
-            "--kg_adapter_enc_range [0,0] --kg_adapter_dec_range [0,32] --keep_ratio 1.0 "
-            "--kg_adapter_node_emb_size 50 --num_relations 1070 "
-            "--max_seq_length 1024 --max_epochs 20 --num_epochs 20 --patience 8 "
-        ),
         # (
         #     "python mymain.py --exp_name 'kg-adapterV4_lr8e-5_wu0.1_zephyr_wqsp_v3+SRGAT_[dec]_max1024_32' --peft_type 'kg-adapter' --lr 8e-5 --warm_up_epoch 0.1 --strategy 'deepspeed' "
         #     "--train_data_version 'wqsp_zephyr_v3' --test_data_version 'wqsp_zephyr_v3' --eval_data_version '0' "
@@ -1370,16 +1358,6 @@ if __name__ == '__main__':
         # ),
 
         # -----------------------------------------GraphextQA--------------------------------------#
-        (
-            "python mymain.py --exp_name 'kg-adapterV4_lr5e-5_wu0.1_zephyr_graphextqa+SRGAT_[dec]_32_max800_ep20' --peft_type 'kg-adapter' --lr 5e-5 --warm_up_epoch 0.1 --strategy 'deepspeed' "
-            "--train_data_version 'graphextqa_zephyr_v2' --test_data_version 'graphextqa_zephyr_v2' --eval_data_version '0' "
-            "--pretrained_path '/raid_sdb/LLMs/zephyr-alpha' --exp_set 'loss_only_on_ans+no_share_ca+use_edge_emb+mix_emb+use_trips+use_SRGAT' "
-            "--node_emb_path '/raid_sdb/home/tsy/KG_data/KG_emb/graphextqa_(41224,512)_Wikidata5m_SimplE_emb.pt' "
-            "--test_data_path '/raid_sdb/home/tsy/KG_data/graphextqa_test.csv' "
-            "--test_set 'graphextqa+no_user_inst+task_system_inst+add_special_tokens' --monitor 'val_em' "
-            "--kg_adapter_enc_range [0,0] --kg_adapter_dec_range [0,32] --keep_ratio 1.0 "
-            "--kg_adapter_node_emb_size 512 --num_relations 495 --max_seq_length 800 --max_epochs 20 --num_epochs 20 "
-        ),
 
         # (
         #     "python mymain.py --exp_name 'kg-adapterV4_lr5e-4_wu0.1_zephyr_graphextqa+SRGAT_[dec]_32+no_kg' --peft_type 'kg-adapter' --lr 5e-4 --warm_up_epoch 0.1 --strategy 'deepspeed' "
@@ -1424,18 +1402,6 @@ if __name__ == '__main__':
 
         # --------------------------------------------CWQ-----------------------------#
             # ---------------------------- zephyr ----------------------#
-
-        (
-            "python mymain.py --exp_name 'kg-adapterV4_lr7e-4_wu0.1_zephyr_cwq_v3+SRGAT_[dec]_32_max1024' --peft_type 'kg-adapter' --lr 7e-4 --warm_up_epoch 0.1 --strategy 'deepspeed' "
-            "--train_data_version 'cwq_zephyr_v3' --test_data_version 'cwq_zephyr_v3' --eval_data_version '0' "
-            "--pretrained_path '/raid_sdb/LLMs/zephyr-alpha' --exp_set 'loss_only_on_ans+no_share_ca+use_edge_emb+mix_emb+use_trips+use_SRGAT' "
-            "--node_emb_path '/raid_sdb/home/tsy/KG_data/KG_emb/WQSP+CWQ_(66791,50)_FreeBase_TransE_emb.pt' "
-            "--test_data_path '/raid_sdb/home/tsy/KG_data/wqsp+cwq_test.csv' "
-            "--test_set 'cwq+no_user_inst+task_system_inst+add_special_tokens' --monitor 'val_em' "
-            "--kg_adapter_enc_range [0,0] --kg_adapter_dec_range [0,32] --keep_ratio 1.0 "
-            "--kg_adapter_node_emb_size 50 --num_relations 1070 "
-            "--max_seq_length 1024 "
-        ),
         # (
         #     "python mymain.py --exp_name 'kg-adapterV4_lr5e-4_wu0.1_zephyr_cwq_v3+SRGAT_[dec]_32_max512+no_kg' --peft_type 'kg-adapter' --lr 5e-4 --warm_up_epoch 0.1 --strategy 'deepspeed' "
         #     "--train_data_version 'cwq_zephyr_v3' --test_data_version 'cwq_zephyr_v3' --eval_data_version '0' "
