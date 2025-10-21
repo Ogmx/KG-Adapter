@@ -574,13 +574,14 @@ class KgAdapterModule(L.LightningModule):
                 if data_name in self.args.test_set:
                     cal_score(data_name, eval_dict)
 
-            print("using lm-evaluation-harness test...")
-            from myeval import llm_eval
+            # print("using lm-evaluation-harness test...")
+            # from myeval import llm_eval
 
             # calculate harness-llm-eval result scores
-            llm_eval_res = llm_eval(self.model, self.args, tokenizer=self.tokenizer,
-                                    epoch=str(self.trainer.current_epoch))
+            # llm_eval_res = llm_eval(self.model, self.args, tokenizer=self.tokenizer,
+            #                        epoch=str(self.trainer.current_epoch))
 
+            llm_eval_res = None
             if llm_eval_res is not None:
                 avg_acc = []
                 for k in llm_eval_res['results']:
@@ -767,3 +768,4 @@ class KgAdapterModule(L.LightningModule):
     #             return idx[:input_pos]  # include the EOS token
     #
     #     return idx
+
